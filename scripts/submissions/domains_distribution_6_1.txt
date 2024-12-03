@@ -1,7 +1,7 @@
 Distribution of domains:
-Music: 5653
-Film: 916
 Books: 145
-TV: 743
+Film: 500
 Games: 294
 Image Collage: 115
+Music: 500
+TV: 500

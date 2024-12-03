@@ -3,8 +3,8 @@ from pymongo import MongoClient
 # Connect to MongoDB
 client = MongoClient('localhost', 27017)
 db = client['reddit_data']
-collection = db['[3]submissions_unified_domain']  # Source collection
-output_collection = db['[4]submissions_final']  # Target collection for storing results
+collection = db['[3]submissions_unified_domain']
+output_collection = db['[4]submissions_final']
 
 # Aggregation pipeline to count entries by `link_flair_text` and filter for counts > 100
 pipeline = [

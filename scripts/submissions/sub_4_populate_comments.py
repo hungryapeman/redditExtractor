@@ -25,9 +25,9 @@ for submission in submissions:
 
         # Update the submission in the original collection with the 'comments' field
         submissions_collection.update_one(
-            {"id": submission_id},  # Match the submission by its id
+            {"id": submission_id},
             {"$set": {"comments": submission['comments']}},
-            upsert=True  # If the submission doesn't exist, insert it
+            upsert=True
         )
 
 print("Comments successfully added to corresponding submissions in the original collection.")
