@@ -8,12 +8,12 @@ target_collection = db['[8]labeling_submissions']
 
 # List of fields to retain
 fields_to_keep = {
-    "_id", "link_flair_text",
+    "_id","id", "link_flair_text",
     "title","selftext", "score", "comments"
 }
 
 fields_to_keep_comments = {
-    "_id", "score", "body"
+    "_id", "id", "score", "body"
 }
 
 # Fetch all documents from the source collection
