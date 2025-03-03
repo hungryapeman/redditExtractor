@@ -3,7 +3,7 @@ import json
 import os
 
 # Define output directory relative to the current working directory
-output_dir = os.path.join(os.getcwd(), "domain_txt")
+output_dir = os.path.join(os.getcwd(), "domain_filtered_txt")
 
 # Create the directory if it doesn't exist
 if not os.path.exists(output_dir):
@@ -24,4 +24,4 @@ for coll_name in collection_names:
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(docs, f, indent=4, ensure_ascii=False)
 
-print("Data exported successfully to the 'domain_txt' folder in the current working directory")
+print("Data exported successfully to the 'domain_filtered_txt' folder in the current working directory")

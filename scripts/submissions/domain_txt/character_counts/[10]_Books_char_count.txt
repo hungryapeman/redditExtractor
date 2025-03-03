@@ -1,2 +1,0 @@
-File: [10]_Books.txt
-Character count: 434442
