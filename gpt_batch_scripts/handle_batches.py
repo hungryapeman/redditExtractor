@@ -56,7 +56,7 @@ def process_batch_file(file_path):
         file_response = client.files.content(output_file_id)
         output_dir = "outputs"
         os.makedirs(output_dir, exist_ok=True)
-        output_file_path = os.path.join(output_dir, f"batch_result_{base_name}.txt")
+        output_file_path = os.path.join(output_dir, f"batch_result_{base_name}")
         with open(output_file_path, "w", encoding="utf-8") as outfile:
             outfile.write(file_response.text)
         log(f"[4/4] Result has been written to {output_file_path}", base_name)
@@ -67,7 +67,7 @@ def main():
     batches_folder = "batches"
     jsonl_files = [os.path.join(batches_folder, f) for f in os.listdir(batches_folder) if f.endswith(".jsonl")]
 
-    max_workers = 3
+    max_workers = 10
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {executor.submit(process_batch_file, file): file for file in jsonl_files}
         for future in concurrent.futures.as_completed(futures):

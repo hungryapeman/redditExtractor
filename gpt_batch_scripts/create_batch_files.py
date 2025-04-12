@@ -1,8 +1,8 @@
 import json
 
-input_path = "../../scripts/submissions/domain_filtered_txt/[10]_Books.txt"
-system_prompt_path = "../../gpt_prompts/final_prompts/books_prompt_final.txt"
-output_file_pattern = "books_batch_{}.jsonl"
+input_path = "../../scripts/submissions/domain_filtered_txt/[10]_Music.txt"
+system_prompt_path = "../../gpt_prompts/final_prompts/music_prompt_final.txt"
+output_file_pattern = "music_batch_{}.jsonl"
 
 with open(system_prompt_path, "r", encoding="utf-8") as f:
     system_prompt = f.read().strip()
